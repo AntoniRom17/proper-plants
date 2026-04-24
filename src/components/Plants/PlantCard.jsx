@@ -1,7 +1,8 @@
-export default function PlantCard() {
+export default function PlantCard({ plant, cart, addToCart }) {
   return (
     <div>
-      {/* single plant will go here */}
+      <span>{plant.image}</span>
+      <h3>{plant.name}</h3>
     </div>
   );
 }
