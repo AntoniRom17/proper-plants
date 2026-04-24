@@ -10,7 +10,6 @@ export default function App() {
     const exists = cart.find((item) => item.id === plant.id);
 
     if (exists) {
-      // increment quantity
       setCart(
         cart.map((item) =>
           item.id === plant.id
@@ -19,7 +18,6 @@ export default function App() {
         )
       );
     } else {
-      // add new item
       setCart([...cart, { ...plant, quantity: 1 }]);
     }
   }
@@ -40,17 +38,30 @@ export default function App() {
             ? { ...item, quantity: item.quantity - 1 }
             : item
         )
-        .filter((item) => item.quantity > 0) // remove if quantity hits 0
+        .filter((item) => item.quantity > 0)
     );
+  }
+
+  function clearCart() {
+    setCart([]);
   }
 
   return (
     <div>
       <h1>Proper Plants</h1>
 
-      <Plants plants={PLANTS} addToCart={addToCart} cart={cart} />
+      <Plants
+        plants={PLANTS}
+        cart={cart}
+        addToCart={addToCart}
+      />
 
-      <Cart cart={cart} increment={increment} decrement={decrement} />
+      <Cart
+        cart={cart}
+        increment={increment}
+        decrement={decrement}
+        clearCart={clearCart}
+      />
     </div>
   );
 }

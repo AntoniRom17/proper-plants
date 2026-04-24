@@ -123,3 +123,21 @@ button:active {
   padding: 0.4rem 0.7rem;
   font-size: 0.85rem;
 }
+
+/* Clear Cart Button */
+.clear-cart {
+  background: #d9534f;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.clear-cart:hover {
+  background: #c9302c;
+}
+
+.clear-cart:active {
+  transform: scale(0.97);
+}
