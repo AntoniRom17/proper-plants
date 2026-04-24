@@ -3,6 +3,7 @@ export default function PlantCard({ plant, cart, addToCart }) {
     <div>
       <span>{plant.image}</span>
       <h3>{plant.name}</h3>
+      <button onClick={() => addToCart(plant)}>Add to cart</button>
     </div>
   );
 }
