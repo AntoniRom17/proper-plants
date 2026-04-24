@@ -1,7 +1,7 @@
-export default function CartItem() {
+export default function CartItem({ item, increment, decrement }) {
   return (
     <div>
-      {/* cart item will go here */}
+      {/* cart item UI will go here */}
     </div>
   );
 }
